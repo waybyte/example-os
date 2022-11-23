@@ -179,9 +179,9 @@ int main(int argc, char *argv[])
 	task_sem = os_semaphore_create(0);
 
 	/* Create Application tasks */
-	task1_id = os_task_create(task1_function, NULL, FALSE);
-	task2_id = os_task_create(task2_function, NULL, FALSE);
-	os_task_create(task3_function, NULL, FALSE);
+	task1_id = os_task_create(task1_function, "task1", NULL, FALSE);
+	task2_id = os_task_create(task2_function, "task2", NULL, FALSE);
+	os_task_create(task3_function, "task3", NULL, FALSE);
 
 	printf("System Initialization finished\n");
 
